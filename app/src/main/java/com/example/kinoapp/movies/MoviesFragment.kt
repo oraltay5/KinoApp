@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import androidx.viewpager2.widget.ViewPager2
 import com.example.kinoapp.R
 import com.example.kinoapp.ViewPagerAdapter
-import com.example.kinoapp.movies.tabs.PopularFragment
-import com.example.kinoapp.movies.tabs.SoonFragment
+import com.example.kinoapp.movies.tabs.popular.PopularFragment
+import com.example.kinoapp.movies.tabs.soon.SoonFragment
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -35,8 +35,8 @@ class MoviesFragment : Fragment() {
         viewPager.adapter = adapter
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             when (position) {
-                0 -> tab.text = "First Tab"
-                1 -> tab.text = "Second Tab"
+                0 -> tab.text = "Coming soon"
+                1 -> tab.text = "Popular"
             }
         }.attach()
     }

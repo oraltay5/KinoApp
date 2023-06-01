@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".favorites.detail.FavoritesDetailActivity"
+    android:background="@color/gray1">
+
+    <RelativeLayout
+        android:id="@+id/backRelative"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/gray1">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/backView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_back"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="12dp"/>
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/posterView"
+        android:layout_width="match_parent"
+        android:layout_height="566dp"
+        app:srcCompat="@drawable/enot"
+        android:layout_below="@+id/backRelative"/>
+
+    <TextView
+        android:id="@+id/titleView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/posterView"
+        android:text="Movie name"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/favoriteClickView"
+        android:textSize="28sp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/favoriteClickView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/posterView"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        app:srcCompat="@drawable/ic_favorite"/>
+
+    <TextView
+        android:id="@+id/genreView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleView"
+        android:text="Genre"/>
+
+    <TextView
+        android:id="@+id/voteAverageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/genreView"
+        android:text="Rating"
+        android:textSize="38sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/nameRatingView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/overview"
+        android:layout_toEndOf="@+id/voteAverageView"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/shape_rectangular_red"
+        android:text="IMDB"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/overview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/voteAverageView"
+        android:text="Description"
+        android:textStyle="italic"/>
+
+</RelativeLayout>

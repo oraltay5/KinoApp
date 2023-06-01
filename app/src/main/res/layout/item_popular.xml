@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/itemPopViewGroup"
+    android:layout_width="match_parent"
+    android:layout_height="155dp"
+    android:paddingHorizontal="16dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/shape_rounded_corners">
+
+    <ImageView
+        android:id="@+id/posterView"
+        android:layout_width="100dp"
+        android:layout_height="145dp"
+        android:layout_centerVertical="true"
+        app:srcCompat="@drawable/enot"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/ratingView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/posterView"
+        android:layout_alignEnd="@id/posterView"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/shape_rectangular_green"
+        android:textColor="@color/white"
+        android:padding="2dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/posterView"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titleView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:background="@drawable/shape_rectangular_white"
+            android:text="Movie name"/>
+
+        <TextView
+            android:id="@+id/genreView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:layout_marginTop="6dp"
+            android:textSize="18sp"
+            android:text="Genre"/>
+
+        <TextView
+            android:id="@+id/languageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:background="@drawable/shape_rectangular_red"
+            android:text="Language"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
